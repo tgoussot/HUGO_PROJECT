@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user scalable=0">
     <title>Hugo Maitre</title>
-    <link rel="stylesheet" href="CSS/Accueil.css">
+    <link rel="stylesheet" href="Accueil.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://db.onlinewebfonts.com/c/21400dc679986534519c638136d62dbf?family=Rage+Italic+V2" rel="stylesheet">
     <script src="https://threejs.org/build/three.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js"></script>
@@ -19,11 +20,13 @@
     
     <header class="header">
         <a href="#" class="logo">La Machieta</a>
+        <!--
         <div class="home-sci">
                 <a href="https://www.youtube.com/@La_machieta/featured"><i class='bx bxl-youtube'></i></a>
                 <a href="https://www.instagram.com/lamachieta/"><i class='bx bxl-instagram-alt'></i></a>
                 <a href="https://www.tiktok.com/@lamachieta"><i class='bx bxl-tiktok'></i></a>
         </div>
+    -->
         
         <!--Barre de navigation-->
         <nav class="navbar">
@@ -38,6 +41,7 @@
 <!--Contenu principal-->
 
     <!--Première partie de la page-->
+    <!--
     <section class="home">
         <div class="home-content">
             <h1>Un montage comme vous n'en avez jamais vu</h1>
@@ -64,10 +68,28 @@
 
         <span class="home-imgHover"></span>
     </section>
+-->
+<section class="home">
+    <div class="overlay"></div> <!-- Overlay pour le gradient -->
+    <div class="home-content">
+        <h1>Un montage comme vous n'en avez jamais vu</h1>
+        <h2>Un montage <span
+                class="txt-rotate"
+                data-period="2000"
+                data-rotate='[ "original,", "sophistiqué,", "artistique,", "recherché,", "hors du commun." ]'></span>
+        </h2>
+        <h3>Donnez vie à vos visions. <br>Discutons-en maintenant</h3>
+
+            <div class="pulse-button btn-box">
+                <a href="mailto:contact.hugomaitre@gmail.com?subject=Intéressé par vos services de montage">Par mail</a>
+                <a href="https://ig.me/m/lamachieta">Par DM Insta</a>
+            </div>
+    </div>
+</section>
 
 
 
-<!--Deuxième partie de la page-->
+<!--Deuxième partie de la page
     <section class="présentations">
         <div class="présentations-content">
             <h1>Qui suis-je ?</h1>
@@ -88,6 +110,39 @@
             </div>
         </div>
     </section>
+-->
+<section class="présentations">
+    <!-- Carte 1: Présentation générale -->
+    <div class="présentations-content card">
+        <h1>Qui suis-je ?</h1>
+        <h3>Si vous vous posez des questions légitimes sur mon parcours, ceci devrait aider...</h3>
+        <p>
+            Ancien salarié dans la restauration, j'ai récemment pris la décision de me lancer en tant que monteur vidéo en "freelance" (indépendant). C'est un revirement très personnel, qui est le fruit d'une longue réflexion et méditation.
+            <br><br>
+            Le monde de la vidéo, et de la réalisation est quelque chose qui m'a toujours attiré. Ce n'est d'ailleurs pas pour rien que je l'ai étudié durant mes années de lycée, et que j'ai pu faire très jeune, de près ou de loin l'expérience de la vidéo, que ce soit dans la réalisation de petites mises en scènes ou dans le montage de vidéos pour une ancienne chaîne YouTube de ma création.
+        </p>
+    </div>
+    
+    <!-- Carte 2: Vos ambitions actuelles -->
+    <div class="présentations-content card">
+        <h1>Mes ambitions</h1>
+        <h3>Un monteur avec une vision différente...</h3>
+        <p>
+            <U>Aujourd'hui, j'aspire donc à devenir monteur : mais pas n'importe lequel.</U>
+            <br><br>
+            Ma démarche, aussi ambitieuse et peut-être orgueilleuse soit-elle, est celle de vouloir me perfectionner un maximum pour devenir en un minimum de temps le meilleur monteur qui soit.
+            <br><br>
+            J'ambitionne à mon échelle d'apporter un second souffle au montage vidéo, en lui donnant une dimension plus esthétique, artistique (dans la mesure bien-sûr de projets cohérents à cette démarche).
+            <br><br>
+            C'est avec plaisir que j'espère collaborer avec vous pour mener à bien ce grand projet !
+        </p>
+    </div>
+    <div class="signature">
+        <p>Hugo Maitre</p>
+    </div>
+</section>
+
+
 
 
     <!--Pied de page-->
@@ -96,7 +151,7 @@
             <h5>Site imaginé et développé par Hugo Maitre. Tous droits réservés ©</h5>
     </footer>
 
-    <script src="Javascript/Accueil.js"></script>
+    <script src="Accueil.js"></script>
     <script src="https://threejs.org/build/three.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js"></script>
 </body>
