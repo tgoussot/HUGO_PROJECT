@@ -29,7 +29,7 @@ body {
     padding: 20px 10%;
     background: black;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     z-index: 3;
