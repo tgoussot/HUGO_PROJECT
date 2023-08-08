@@ -516,10 +516,8 @@ width: 100%;
 
 /*Animation "glitch"*/
 footer h5 {
-  margin-top: 1000px;
   bottom: 0;
   left: 0;
-  width: 100%;
   padding: 10px 10%;
   background-color: black;
   font-family: "Rage Italic V2";
@@ -590,7 +588,6 @@ footer h5 {
   align-items: center;
   padding: 40px 20px;
   background-color: black;
-  min-height: 100vh;
   flex-wrap: wrap; /* Permettre aux cartes de se replier si nécessaire */
 }
 
@@ -724,10 +721,4 @@ footer h5 {
   background-color: #e91e63; 
   color: #fff; /* Inversion des couleurs au survol */
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Ombre plus grande au survol */
-}
-
-
-/* Styles pour le texte défilant si nécessaire */
-.txt-rotate {
-  /* Styles pour le texte défilant */
 }
