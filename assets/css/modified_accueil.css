@@ -226,7 +226,6 @@ width: 100%;
 }
 
 /*Animation du gros titre h1*/
-/*
 @keyframes lights {
     0% {
       color: hsl(230, 40%, 80%);
@@ -274,6 +273,7 @@ width: 100%;
     }
     
   }
+/*
 
   
   body {
@@ -621,6 +621,8 @@ footer h5 {
   color: #f0f0f0;
   font-weight: 600;
   text-align:center;
+  animation: lights 5s 750ms linear infinite;
+  animation-delay: 0s;
 }
 
 .card h3 {
