@@ -709,7 +709,7 @@ footer h5 {
   padding: 12px 25px;
   border: 2px solid #e91e63; /* Bordure colorée */
   background-color: transparent; 
-  color: #e91e63; /* Couleur du texte */
+  color:white; /* Couleur du texte */
   border-radius: 25px; /* Bordures entièrement arrondies */
   text-decoration: none;
   font-weight: 600;
@@ -717,6 +717,8 @@ footer h5 {
 
   /* Ombre pour ajouter un effet de profondeur */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  margin-left:5%;
 }
 
 .pulse-button.btn-box a:hover {
@@ -738,13 +740,13 @@ div.signature-container {
 }
 
 .signature-container path[style] {
-  stroke-width: 2px !important;
+  stroke-width: 20px !important;
   stroke: rgb(255, 255, 255) !important;
 }
 
 .signature-container svg{
-  width: 10%;
-  height: 10%;
+  width: 20%;
+  height: 20%;
 }
 
 svg#svg8{

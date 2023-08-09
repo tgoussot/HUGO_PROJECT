@@ -707,7 +707,7 @@ footer h5 {
   padding: 12px 25px;
   border: 2px solid #e91e63; /* Bordure colorée */
   background-color: transparent; 
-  color: #e91e63; /* Couleur du texte */
+  color: white; /* Couleur du texte */
   border-radius: 25px; /* Bordures entièrement arrondies */
   text-decoration: none;
   font-weight: 600;
