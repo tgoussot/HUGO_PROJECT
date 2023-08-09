@@ -77,56 +77,31 @@ function topFunction() {
     }
 }
 
-
-// ECRAN DE CHARGEMENT 
-let scene, camera, renderer, reelMaterial, reel, filmPlane;
-
-function init() {
-    // Initialisation de la scène, de la caméra et du rendu
-    scene = new THREE.Scene();
-    camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    document.getElementById('three-container').appendChild(renderer.domElement);
-
-    // Création de la bobine de film
-    const reelGeometry = new THREE.CylinderGeometry(5, 5, 2, 32);
-    reelMaterial = new THREE.MeshBasicMaterial({ 
-        map: new THREE.TextureLoader().load('bobine.jpg') // Remplacez par votre texture de bobine
-    });
-    reel = new THREE.Mesh(reelGeometry, reelMaterial);
-    scene.add(reel);
-
-    // Plan sur lequel le "film" sera projeté
-    const planeGeometry = new THREE.PlaneGeometry(20, 10, 1, 1);
-    const planeMaterial = new THREE.MeshBasicMaterial({
-        map: new THREE.TextureLoader().load('path_to_video_frame.jpg') // Remplacez par une image ou un extrait de film
-    });
-    filmPlane = new THREE.Mesh(planeGeometry, planeMaterial);
-    filmPlane.position.set(0, 0, -10);
-    scene.add(filmPlane);
-
-    camera.position.z = 15;
-    animate();
-}
-
-function animate() {
-    requestAnimationFrame(animate);
-
-    // Rotation de la bobine
-    reel.rotation.x += 0.01;
-    reel.rotation.y += 0.01;
-
-    renderer.render(scene, camera);
-}
-
-// Masquer l'écran de chargement après 5 secondes
-window.addEventListener('load', function() {
-    init();
-
-    setTimeout(function() {
-        var preloader = document.getElementById('preloader');
-        preloader.style.display = 'none';
-    }, 5000);
+document.addEventListener("DOMContentLoaded", function() {
+  animateSignature();
 });
 
+function animateSignature() {
+  // Sélectionnez tous les tracés dans le SVG
+  const signaturePaths = document.querySelectorAll('.signature-container path');
+  let delay = 0; // Initial delay
+
+  signaturePaths.forEach(path => {
+      const length = path.getTotalLength();
+      
+      // Définir les propriétés initiales
+      path.style.transition = path.style.WebkitTransition = 'none';
+      path.style.strokeDasharray = length + ' ' + length;
+      path.style.strokeDashoffset = length;
+      
+      // Force le redessin du tracé (hack pour que les changements soient appliqués avant la transition)
+      path.getBoundingClientRect();
+      
+      // Appliquer la transition avec un délai
+      path.style.transition = path.style.WebkitTransition = `stroke-dashoffset 4s ease-in-out ${delay}s`;
+      path.style.strokeDashoffset = '0';
+
+      // Augmenter le délai pour le prochain tracé (lettre)
+      delay += 3; // 3 secondes pour chaque lettre
+  });
+}

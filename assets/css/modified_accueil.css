@@ -722,3 +722,29 @@ footer h5 {
   color: #fff; /* Inversion des couleurs au survol */
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Ombre plus grande au survol */
 }
+
+div.signature-container {
+  margin-bottom: 0px;
+  justify-content: center;
+  align-items: center;
+  display:flex
+}
+
+.signature-container path {
+  stroke-dasharray: 20000;
+  stroke-dashoffset: 20000;
+}
+
+.signature-container path[style] {
+  stroke-width: 2px !important;
+  stroke: rgb(255, 255, 255) !important;
+}
+
+.signature-container svg{
+  width: 10%;
+  height: 10%;
+}
+
+svg#svg8{
+  height:auto;
+}
