@@ -98,10 +98,10 @@ function animateSignature() {
       path.getBoundingClientRect();
       
       // Appliquer la transition avec un délai
-      path.style.transition = path.style.WebkitTransition = `stroke-dashoffset 1s ease-in-out ${delay}s`;
+      path.style.transition = path.style.WebkitTransition = `stroke-dashoffset 0.5s ease-in-out ${delay}s`;
       path.style.strokeDashoffset = '0';
 
       // Augmenter le délai pour le prochain tracé (lettre)
-      delay += 1; // 3 secondes pour chaque lettre
+      delay += 0.5; // 3 secondes pour chaque lettre
   });
 }
