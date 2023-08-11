@@ -1,3 +1,4 @@
+// ANIMATION TEXTE DEFILANT
 var TxtRotate = function(el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
@@ -77,6 +78,7 @@ function topFunction() {
     }
 }
 
+// ANIMATION SIGNATURE 
 document.addEventListener("DOMContentLoaded", function() {
   animateSignature();
 });

@@ -1,3 +1,10 @@
+
+/* 
+==============================
+BASE STYLES
+==============================
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
@@ -18,58 +25,14 @@ body {
     color: #ededed;
     background-color: black;
     display: flex;
-
 }
 
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 10%;
-    background: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 3;
-}
 
-@media all and (max-width:1192px) {
-  .header {
-    flex-direction: column;
-    height: auto;
-    position: sticky;
-    margin: 0 auto;
-  }
-  .logo {
-    margin-bottom: 20px;
-  }
-
-  .home-sci {
-    margin-bottom: 20px;
-  }
-
-  body {
-    flex-direction: column;
-  }
-}
-
-@media all and (max-width:716px) {
-  .navbar {
-    flex-direction: column;
-  }
-}
-
-.logo {
-    position: relative;
-    margin-right: 20px;
-    font-size: 20px;
-    color: #ededed;
-    text-decoration: none;
-    font-weight: 600;
-}
-
+/* 
+==============================
+HEADER STYLES
+==============================
+*/
 /*Boutons YouTube, Insta et Tiktok*/
 .home-sci {
   position: relative;
@@ -100,6 +63,11 @@ body {
   transition: .5s;
 }
 
+/* 
+==============================
+YOUTUBE BUTTON STYLES
+==============================
+*/
 /*Bouton YouTube*/
 a[href="https://www.youtube.com/@La_machieta/featured"]:hover {
   color: #FF0000;
@@ -120,6 +88,103 @@ a[href="https://www.youtube.com/@La_machieta/featured"]::before {
 a[href="https://www.youtube.com/@La_machieta/featured"]::before {
   width: 100%;
 }
+
+/* 
+==============================
+INSTAGRAM BUTTON STYLES
+==============================
+*/
+
+
+/* 
+==============================
+TIKTOK BUTTON STYLES
+==============================
+*/
+
+
+/* 
+==============================
+OTHER STYLES
+==============================
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+*::selection {
+    background: #00abf0;
+    color: #081b29;
+}
+
+body {
+    flex-direction: column;
+    height: 110%;
+    width: 100%;
+    color: #ededed;
+    background-color: black;
+    display: flex;
+
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+}
+
+@media all and (max-width:1192px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    position: sticky;
+    margin: 0 auto;
+  }
+  .logo {
+    margin-bottom: 20px;
+  }
+
+  .home-sci {
+    margin-bottom: 20px;
+  }
+
+  body {
+    flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width:716px) {
+  .navbar {
+    flex-direction: column;
+  }
+}
+
+.logo {
+    position: relative;
+    margin-right: 20px;
+    font-size: 20px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+
+
 
 /*Bouton Insta*/
 a[href="https://www.instagram.com/lamachieta/"]:hover {
@@ -176,55 +241,11 @@ width: 100%;
     color: #00abf0;
 }
 
-/*Première partie de la page*/
-/*
-.home {
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 120px 40px 80px 10%;
-  height: 1200px;
-  opacity: 1;
-  z-index: 1;
-}
-*/
-
-/* .home:hover {
-  animation: survol 1s ease-in-out;
-  opacity: 1;
-}
-
-@keyframes survol {
-	from { 
-		opacity: 0.3;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-.home:not(:hover) {
-  animation: enlèvement 1s ease-in-out;
-  opacity: 0.3;
-}
-
-  @keyframes enlèvement {
-    from { 
-      opacity: 1;
-    }
-    to {
-      opacity: 0.3;
-    }
-  } */
-
 .home-content {
     z-index: 2;
 }
 
 /*Animation du gros titre h1*/
-/*
 @keyframes lights {
     0% {
       color: hsl(230, 40%, 80%);
@@ -273,250 +294,10 @@ width: 100%;
     
   }
 
-  
-  body {
-    margin: 0;
-    font: 100% / 1.5 Raleway, sans-serif;
-    color: hsl(230, 100%, 95%);
-    height: 100vh;
-    display: flex;
-  }
-  
-.home-content h1 {
-    position: relative;
-    font-size: 56px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin: auto;
-    animation: lights 5s 750ms linear infinite;
-    animation-delay: 0s;
-}
-
-.home-content h3 {
-    position: relative;
-    font-size: 32px;
-    font-weight: 700;
-    color: #00abf0;
-    animation: apparition 8.0s ease-out;
-}
-
-.home-content p {
-    position: relative;
-    font-size: 16px;
-    margin: 20px 0 30px;
-    animation: apparition 10.0s ease-out;
-}
-
-.home-content .btn-box {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    width: 345px;
-    height: 50px;
-    animation: apparition 12.0s ease-out;
-}
-*/
-
-/*Boutons "Mon mail" et "Mon Insta"*/
-/*
-.btn-box a {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 100%;
-    background: #00abf0;
-    border: 2px solid #00abf0;
-    border-radius: 8px;
-    font-size: 19px;
-    color: #081b29;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 1px;
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
-    box-shadow: 0 0 0 0 rgba(112, 61, 232, 0.7);
-    -webkit-animation: pulse 3s infinite cubic-bezier(0.66, 0, 0, 1);
-  -moz-animation: pulse 3s infinite cubic-bezier(0.66, 0, 0, 1);
-  -ms-animation: pulse 3s infinite cubic-bezier(0.66, 0, 0, 1);
-  animation: pulse 3s infinite cubic-bezier(0.66, 0, 0, 1);
-}
-
-.btn-box a:hover {
-    color: #00abf0;
-}
-
-.btn-box a:nth-child(2) {
-    background: transparent;
-    color: #00abf0;
-}
-
-.btn-box a:nth-child(2):hover {
-    color: #081b29;
-}
-
-.btn-box a:nth-child(2)::before {
-    background: #00abf0;
-}
-
-.btn-box a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: #081b29;
-    z-index: -1;
-    transition: .5s;
-}
-
-.btn-box a:hover::before {
-    width: 100%;
-}
-
-.pulse-button:hover 
-{
-  -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
-}
-*/
-/*
-@-webkit-keyframes pulse {to {box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);}}
-@-moz-keyframes pulse {to {box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);}}
-@-ms-keyframes pulse {to {box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);}}
-@keyframes pulse {to {box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);}}
-*/
-
-/*Animation découverte de la deuxième partie de page*/
-
-
-
-/* KEYFRAMES ANIMATION */
-/*@keyframes showRight {
-    100% {
-        width: 0;
-    }
-}
-
-@keyframes manipActiveHover {
-    100% {
-        pointer-events: auto;
-    }
-}
-
-@keyframes apparition {
-	from { 
-		opacity: 0;
-		transform: translateY(-200pxpx);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0px);
-	}
-}*/
-
-
-/*Deuxième partie de la page*/
-/*
-.présentations {
-  background-size: 1000px;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 120px 80px 80px 40px;
-  height: 1200px;
-  opacity: 1;
-  z-index: 1;
-}
-
-
-/* .présentations:hover {
-  animation: survol 1s ease-in-out;
-  opacity: 1;
-}
-
-@keyframes survol {
-	from { 
-		opacity: 0.3;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-.présentations:not(:hover) {
-  animation: enlèvement 1s ease-in-out;
-  opacity: 0.3;
-}
-
-  @keyframes enlèvement {
-    from { 
-      opacity: 1;
-    }
-    to {
-      opacity: 0.3;
-    }
-  } */
-  
-/*
-.présentations-content {
-  max-width: 1600px;
-  z-index: 1;
-}
-*/
-
-
-/*
-.présentations-content h1 {
-  position: relative;
-  text-align: center;
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin: auto;
-  animation: apparition 20s;
-  animation: lights 5s 750ms linear infinite;
-  animation-delay: 0s;
-}
-*/
-
-/*.présentations-content h3 {
-  position: relative;
-  text-align: center;
-  font-size: 32px;
-  font-weight: 700;
-  color: #00abf0;
-  animation: apparition 20s;
-}
-
-.présentations-content p {
-  position: relative;
-  text-align: center;
-  font-size: 16px;
-  margin: 20px 0 40px;
-  animation: apparition 20s;
-}
-*/
-
-/*
-.présentations-content .btn-box {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  width: 345px;
-  height: 50px;
-}
-*/
-
 /*Animation "glitch"*/
 footer h5 {
-  margin-top: 1000px;
   bottom: 0;
   left: 0;
-  width: 100%;
   padding: 10px 10%;
   background-color: black;
   font-family: "Rage Italic V2";
@@ -557,26 +338,25 @@ footer h5 {
   cursor: pointer;
   padding: 5px 15px;
   font-size: 18px;
-  border-radius: 70px; /* Bord arrondi pour un look moderne */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre pour donner de la profondeur */
-  transition: background-color 0.3s, transform 0.3s; /* Transition douce pour les effets de survol */
+  border-radius: 70px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  transition: background-color 0.3s, transform 0.3s; 
   display: none;
   opacity: 0;
   transition: opacity 0.5s;
 }
 
 #myBtn:hover {
-  background-color: #0095d5; /* Une nuance légèrement plus foncée de bleu pour l'effet de survol */
-  transform: translateY(-3px); /* Légère élévation du bouton lors du survol */
+  background-color: #0095d5; 
+  transform: translateY(-3px); 
 }
 
 #myBtn:active {
-  transform: translateY(0); /* Réinitialiser la position du bouton lorsqu'il est cliqué */
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Réduire l'ombre pour donner l'illusion que le bouton est enfoncé */
+  transform: translateY(0); 
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); 
 }
 
 /* ECRAN DE CHARGEMENT */
-
 /* EN COURS DE DEV :) */
 
 
@@ -587,22 +367,21 @@ footer h5 {
   align-items: center;
   padding: 40px 20px;
   background-color: black;
-  min-height: 100vh;
-  flex-wrap: wrap; /* Permettre aux cartes de se replier si nécessaire */
+  flex-wrap: wrap; 
 }
 
 .card {
   font-family: 'Roboto', sans-serif;
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Bordure légèrement visible sur fond noir */
+  border: 1px solid rgba(255, 255, 255, 0.2); 
   border-radius: 12px;
   padding: 40px 30px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.3), 0 6px 6px rgba(0,0,0,0.2);
-  max-width: calc(50% - 20px); /* Deux cartes côte à côte avec un peu d'espacement */
+  max-width: calc(50% - 20px); 
   width: 100%;
-  background-color: black; /* Fond noir */
-  margin: 10px; /* Espacement entre les cartes */
+  background-color: black; 
+  margin: 10px; 
   transition: box-shadow 0.3s ease, transform 0.3s ease;
-  color: white; /* Couleur du texte blanc par défaut */
+  color: white; 
 }
 
 .card:hover {
@@ -621,6 +400,8 @@ footer h5 {
   color: #f0f0f0;
   font-weight: 600;
   text-align:center;
+  animation: lights 5s 750ms linear infinite;
+  animation-delay: 0s;
 }
 
 .card h3 {
@@ -653,7 +434,7 @@ footer h5 {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative; /* Pour positionner l'overlay */
+  position: relative; 
   color: #fff;
 }
 
@@ -663,12 +444,12 @@ footer h5 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Superposition noire transparente pour améliorer la lisibilité du texte */
+  background: rgba(0, 0, 0, 0.6); 
   z-index: 1;
 }
 
 .home-content {
-  position: relative; /* Pour s'assurer que le contenu est au-dessus de l'overlay */
+  position: relative; 
   z-index: 2;
   max-width: 800px;
   text-align: center;
@@ -688,7 +469,7 @@ footer h5 {
 .home h3 {
   font-size: 2em;
   margin-bottom: 20px;
-  color: #e91e63; /* Une couleur contrastante pour le sous-titre */
+  color: #e91e63;
 }
 
 .home p {
@@ -699,32 +480,51 @@ footer h5 {
 .cta-section {
   display: flex;
   justify-content: center;
-  gap: 20px; /* Espace entre les boutons */
+  gap: 20px; 
 }
 
 .pulse-button.btn-box a {
   display: inline-block;
   padding: 12px 25px;
-  border: 2px solid #e91e63; /* Bordure colorée */
+  border: 2px solid #e91e63; 
   background-color: transparent; 
-  color: white; /* Couleur du texte */
-  border-radius: 25px; /* Bordures entièrement arrondies */
+  color:white; 
+  border-radius: 25px;
   text-decoration: none;
   font-weight: 600;
   transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-
-  /* Ombre pour ajouter un effet de profondeur */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-left:5%;
 }
 
 .pulse-button.btn-box a:hover {
   background-color: #e91e63; 
-  color: #fff; /* Inversion des couleurs au survol */
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Ombre plus grande au survol */
+  color: #fff; 
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
 }
 
+div.signature-container {
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+  display:flex
+}
 
-/* Styles pour le texte défilant si nécessaire */
-.txt-rotate {
-  /* Styles pour le texte défilant */
+.signature-container path {
+  stroke-dasharray: 20000;
+  stroke-dashoffset: 20000;
+}
+
+.signature-container path[style] {
+  stroke-width: 20px !important;
+  stroke: rgb(255, 255, 255) !important;
+}
+
+.signature-container svg{
+  width: 30% ;
+  height: 30% ;
+}
+
+svg#svg8{
+  height:auto;
 }
