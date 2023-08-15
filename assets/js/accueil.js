@@ -78,32 +78,26 @@ function topFunction() {
     }
 }
 
-// ANIMATION SIGNATURE 
-document.addEventListener("DOMContentLoaded", function() {
-  animateSignature();
-});
+let animationPlayed = false;
 
 function animateSignature() {
-  // Sélectionnez tous les tracés dans le SVG
-  const signaturePaths = document.querySelectorAll('.signature-container path');
-  let delay = 0; // Initial delay
-
-  signaturePaths.forEach(path => {
-      const length = path.getTotalLength();
-      
-      // Définir les propriétés initiales
-      path.style.transition = path.style.WebkitTransition = 'none';
-      path.style.strokeDasharray = length + ' ' + length;
-      path.style.strokeDashoffset = length;
-      
-      // Force le redessin du tracé (hack pour que les changements soient appliqués avant la transition)
-      path.getBoundingClientRect();
-      
-      // Appliquer la transition avec un délai
-      path.style.transition = path.style.WebkitTransition = `stroke-dashoffset 0.5s ease-in-out ${delay}s`;
-      path.style.strokeDashoffset = '0';
-
-      // Augmenter le délai pour le prochain tracé (lettre)
-      delay += 0.5; // 3 secondes pour chaque lettre
-  });
+    if (animationPlayed) return;
+    animationPlayed = true;
+    
+    // The rest of the animateSignature function remains the same
+    const signaturePaths = document.querySelectorAll('.signature-container path');
+    let delay = 0;
+    
+    signaturePaths.forEach(path => {
+        const length = path.getTotalLength();
+        path.style.transition = path.style.WebkitTransition = 'none';
+        path.style.strokeDasharray = length + ' ' + length;
+        path.style.strokeDashoffset = length;
+        path.getBoundingClientRect();
+        path.style.transition = path.style.WebkitTransition = `stroke-dashoffset 0.5s ease-in-out ${delay}s`;
+        path.style.strokeDashoffset = '0';
+        delay += 0.5;
+    });
 }
+
+document.querySelector('#ambitions-card').addEventListener('mouseover', animateSignature);
