@@ -37,12 +37,12 @@ HEADER STYLES
 .home-sci {
   position: relative;
   top: 0px;
-  margin-right: 20px;
   bottom: 40px;
   width: 170px;
   display: flex;
   flex-direction:row;
   justify-content: space-between;
+  margin-top : 20px;
 }
 
 .home-sci a {
@@ -527,4 +527,23 @@ div.signature-container {
 
 svg#svg8{
   height:auto;
+}
+
+
+.containerFooter{
+  display:flex;
+  background-color : black;
+  flex-direction : column;
+  justify-content : center;
+  align-items: center;
+  text-align:center;
+  padding: 20px;
+}
+
+.containerFooter p{
+  width:25%
+}
+
+.footerSection{
+
 }
