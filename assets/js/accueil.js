@@ -101,3 +101,18 @@ function animateSignature() {
 }
 
 document.querySelector('#ambitions-card').addEventListener('mouseover', animateSignature);
+
+
+function toggleMenu() {
+  const navbar = document.querySelector(".navbar");
+  if (navbar.classList.contains("navbar-active")) {
+      navbar.classList.remove("navbar-active");
+  } else {
+      // Add the transitioning class to create the smooth effect
+      navbar.classList.add("navbar-transitioning");
+      setTimeout(() => {
+          navbar.classList.remove("navbar-transitioning");
+          navbar.classList.add("navbar-active");
+      }, 500);  // The timeout should match the transition duration in the CSS
+  }
+}

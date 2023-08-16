@@ -148,7 +148,7 @@ body {
 
 @media all and (max-width:1192px) {
   .header {
-    flex-direction: column;
+    flex-direction: row;
     height: auto;
     position: sticky;
     margin: 0 auto;
@@ -544,6 +544,218 @@ svg#svg8{
   width:25%
 }
 
-.footerSection{
+.navbar-logo {
+  max-width: 80px; 
+  height: auto; 
+  vertical-align: middle; 
+}
 
+
+/* Hamburger menu button styles */
+.hamburger-menu {
+  display: none; /* Initially hidden */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  margin: 5px;
+}
+
+.hamburger-line {
+  width: 25px;
+  height: 3px;
+  background-color: #333; /* Color of the hamburger lines */
+  margin: 4px 0;
+  display: block;
+}
+
+/* Responsive styles */
+@media (max-width: 1192px) {
+  /* Display hamburger menu button */
+  .hamburger-menu {
+      display: block;
+  }
+  
+  /* Hide navbar items */
+  .navbar-items {
+      display: none;
+  }
+  
+  /* Show navbar items when menu is active */
+  .navbar-active .navbar-items {
+      display: block;
+  }
+}
+
+/* Stylized Hamburger menu button styles */
+.hamburger-menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hamburger-line {
+  width: 30px;
+  height: 3px;
+  background-color: #333; /* Color of the hamburger lines */
+  transition: background-color 0.3s;
+}
+
+.hamburger-menu:hover .hamburger-line {
+  background-color: #555; /* Darker color on hover */
+}
+
+@media (max-width: 1192px) {
+  /* Hide entire navbar */
+  .navbar a {
+      display: none;
+  }
+  
+  /* Display only the hamburger menu button */
+  .hamburger-menu {
+      display: flex;
+  }
+}
+
+/* Hide hamburger button for screens larger than 1192px */
+@media (min-width: 1193px) {
+  .hamburger-menu {
+      display: none;
+  }
+}
+
+/* Flex styling for navbar to align logo and hamburger on the same line for screens smaller than 1192px */
+@media (max-width: 1192px) {
+  .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+}
+
+/* Ensure horizontal alignment of logo and hamburger for screens smaller than 1192px */
+@media (max-width: 1192px) {
+  .navbar {
+      flex-wrap: nowrap; /* Prevent wrapping of items */
+      padding: 10px; /* Add some padding */
+  }
+
+  .navbar-logo, .hamburger-menu {
+      margin: 0; /* Remove any margins */
+  }
+}
+
+/* Further adjustments for horizontal alignment of logo and hamburger for screens smaller than 1192px */
+@media (max-width: 1192px) {
+  .navbar {
+      height: auto; /* Adjust the height */
+  }
+
+  .navbar-logo img {
+      max-width: 70%; /* Reduce the logo width if needed */
+      vertical-align: middle; /* Align the logo vertically in the middle */
+  }
+
+  .hamburger-menu {
+      align-self: center; /* Center the hamburger button vertically */
+  }
+}
+@media (max-width: 1192px) {
+    .navbar:not(.navbar-active) a {
+        display: none; /* Hide the links by default */
+    }
+
+    .navbar.navbar-active a {
+        display: block; /* Show the links when navbar-active class is added */
+    }
+}
+/* Styles for the menu overlay effect when active */
+.navbar.navbar-active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    backdrop-filter: blur(5px); /* Blurred background effect */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure the menu is above other content */
+}
+
+.navbar.navbar-active a {
+    display: block;
+    margin: 10px 0;
+    font-size: 1.5rem; /* Increase font size for better visibility */
+    color: #fff; /* White color for the links */
+    text-decoration: none;
+}
+
+.navbar.navbar-active a:hover {
+    color: #ddd; /* Slightly darker color on hover */
+}
+
+
+/* Hide the hamburger button when the menu is active */
+.navbar.navbar-active .hamburger-menu {
+    display: none;
+}
+
+/* Styles for the close button */
+.close-menu {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    background: transparent;
+}
+.close-menu:hover {
+    color: #ddd;
+}
+
+/* Simplified transition effects for the navbar menu */
+.navbar {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.navbar.navbar-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hide the close button by default and only show it when the menu is active */
+.close-menu {
+    display: none;
+}
+
+.navbar.navbar-active .close-menu {
+    display: block;
+    position: relative;  /* Change from absolute to relative positioning */
+    bottom: unset;  /* Remove the bottom positioning */
+    right: unset;  /* Remove the right positioning */
+    margin-top: 20px;  /* Add some margin to position it below the menu items */
+}
+
+/* Ensure the navbar is visible by default */
+.navbar {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Adjusted smooth transition effects for the navbar menu */
+.navbar:not(.navbar-active) {
+    opacity: 1;
+    transform: translateY(0);
 }

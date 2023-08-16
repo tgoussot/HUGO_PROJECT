@@ -16,7 +16,7 @@
 
 <body>     
     <header class="header">
-        <a href="assets/css/#" class="logo">La Machieta</a>
+        <img src="assets/img/logo_hugo" alt="La Machieta Logo" class="navbar-logo">
         <!--
             <div class="home-sci">
                     <a href="https://www.youtube.com/@La_machieta/featured"><i class='bx bxl-youtube'></i></a>
@@ -27,11 +27,20 @@
         
         <!--Barre de navigation-->
         <nav class="navbar">
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger-menu" onclick="toggleMenu()">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
             <a href="#" class="active">Accueil</a>
             <a href="portfolio.html">Portfolio</a>
             <a href="prestation.html">Mes prestations</a>
             <a href="blog.html">Blog</a>
             <a href="about.html">Le site</a>
+            <span class="close-menu" onclick="toggleMenu()">✖</span>
+            
         </nav>
     </header>
 
